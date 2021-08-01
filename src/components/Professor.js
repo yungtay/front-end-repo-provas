@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
 export default function Professor() {
-  const [tests, setTests] = useState();
+  const [tests, setTests] = useState([]);
   let [categories, setCategories] = useState({});
   const { id } = useParams();
   useEffect(() => {

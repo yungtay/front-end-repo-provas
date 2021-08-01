@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Disciplines() {
-  const [disciplines, setDisciplines] = useState();
+  const [disciplines, setDisciplines] = useState([]);
   useEffect(() => {
     const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/disciplines`);
     request.then((response) => setDisciplines(response.data));

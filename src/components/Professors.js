@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Professors() {
-  const [professors, setProfessors] = useState();
+  const [professors, setProfessors] = useState([]);
   useEffect(() => {
     const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/professors`);
     request.then((response) => setProfessors(response.data));
