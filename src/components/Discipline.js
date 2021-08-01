@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
 export default function Discipline() {
-  const [tests, setTests] = useState([]);
+  const [tests, setTests] = useState();
   let [categories, setCategories] = useState({});
   const { id } = useParams();
   useEffect(() => {
@@ -23,7 +23,7 @@ export default function Discipline() {
 
   return (
     <div>
-      {Object.keys(categories)?.map((category, index) => (
+      {!Object.keys(categories) ? "" : Object.keys(categories)?.map((category, index) => (
         <div key={index}>
           {category}
           {tests?.map((tests, index) => category === tests.category.name ? (
