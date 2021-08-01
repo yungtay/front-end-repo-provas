@@ -10,6 +10,8 @@ export default function Professors() {
     request.catch(() => alert("Houve um erro ao buscar os professores"));
   }, []);
 
+  console.log(professors)
+
   return (
     <ul>
       {!professors ? "" :professors.map((professor, index) => (
