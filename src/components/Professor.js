@@ -23,7 +23,7 @@ export default function Professor() {
 
   return (
     <div>
-      {!Object.keys(categories) ? "" : Object.keys(categories)?.map((category, index) => (
+      {Object.keys(categories)?.map((category, index) => (
         <div key={index}>
           {category}
           {tests?.map((tests, index) => category === tests.category.name ? (

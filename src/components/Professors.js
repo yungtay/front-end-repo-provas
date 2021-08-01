@@ -10,11 +10,11 @@ export default function Professors() {
     request.catch(() => alert("Houve um erro ao buscar os professores"));
   }, []);
 
-  console.log(professors)
+  console.log(process.env.REACT_APP_API_BASE_URL)
 
   return (
     <ul>
-      {!professors ? "" :professors.map((professor, index) => (
+      {professors?.map((professor, index) => (
         <li key={index}>
           <Link to={`/professor/${professor.id}`} key={index}>
             {professor.name} - {professor.numberTests}
