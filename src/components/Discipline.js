@@ -4,12 +4,12 @@ import { Link, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 
-export default function Professor() {
+export default function Discipline() {
   const [tests, setTests] = useState();
   let [categories, setCategories] = useState({});
   const { id } = useParams();
   useEffect(() => {
-    const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/tests/professor/${id}`);
+    const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/tests/discipline/${id}`);
     request.then((response) => {
       setTests(response.data);
       response.data.forEach((test) => {
@@ -20,7 +20,7 @@ export default function Professor() {
         }
       });
     });
-    request.catch(() => alert("Houve um erro ao buscar os professores"));
+    request.catch(() => alert("Houve um erro ao buscar as disciplinas"));
   }, []);
 
   return (
@@ -31,7 +31,7 @@ export default function Professor() {
           {tests?.map((tests, index) => category === tests.category.name ? (
             <div key={index}>
               <a href={tests.pdf} key={index}>
-                {tests.semester.name} - {tests.discipline.name}
+                {tests.semester.name} - {tests.professor.name}
               </a>
             </div>
           ): "")}

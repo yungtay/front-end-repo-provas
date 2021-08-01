@@ -4,6 +4,7 @@ import Home from './components/Home'
 import Professors from './components/Professors'
 import Professor from './components/Professor'
 import Disciplines from "./components/Disciplines";
+import Discipline from "./components/Discipline";
 
 export default function App() {
 
@@ -21,6 +22,9 @@ export default function App() {
             </Route>
             <Route path="/disciplines" exact>
               <Disciplines />
+            </Route>
+            <Route path="/discipline/:id" exact>
+              <Discipline />
             </Route>
         </Switch>
     </BrowserRouter>

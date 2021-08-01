@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 export default function Professors() {
   const [professors, setProfessors] = useState();
   useEffect(() => {
-    const request = axios.get("http://localhost:4000/professors");
+    const request = axios.get(`${process.env.REACT_APP_API_BASE_URL}/professors`);
     request.then((response) => setProfessors(response.data));
     request.catch(() => alert("Houve um erro ao buscar os professores"));
   }, []);
