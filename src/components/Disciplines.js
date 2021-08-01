@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Disciplines() {
@@ -10,8 +9,6 @@ export default function Disciplines() {
     request.then((response) => setDisciplines(response.data));
     request.catch(() => alert("Houve um erro ao buscar as disciplinas"));
   }, []);
-
-  console.log(disciplines);
 
   return (
     <ul>

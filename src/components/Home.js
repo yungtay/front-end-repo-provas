@@ -1,7 +1,4 @@
-import styled from "styled-components";
-import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
-import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (

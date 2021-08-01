@@ -1,6 +1,4 @@
-import styled from "styled-components";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router";
 

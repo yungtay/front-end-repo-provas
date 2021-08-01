@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import axios from "axios";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 export default function Professors() {
@@ -10,8 +9,6 @@ export default function Professors() {
     request.then((response) => setProfessors(response.data));
     request.catch(() => alert("Houve um erro ao buscar os professores"));
   }, []);
-
-  console.log(professors);
 
   return (
     <ul>
