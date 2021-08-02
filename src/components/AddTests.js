@@ -30,12 +30,9 @@ export default function AddTest() {
 
     const request = axios
       .post(`${process.env.REACT_APP_API_BASE_URL}/tests`, test)
-      .then((response) => console.log(response.data))
+      .then(() => alert("A prova foi salva, obrigado !"))
       .catch(() => alert("Erro"));
   }
-
-  console.log(test);
-  console.log(professors);
 
   return (
     <form onSubmit={submit}>
