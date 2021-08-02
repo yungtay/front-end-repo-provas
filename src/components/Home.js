@@ -7,6 +7,7 @@ export default function Home() {
         {" "}
         <li><Link to="/professors">Listar por Professor</Link></li>
         <li><Link to="/disciplines">Listar por Disciplina</Link></li>
+        <li><Link to="/insert">Adicionar Teste</Link></li>
       </ul>
     </div>
   );

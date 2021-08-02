@@ -5,6 +5,7 @@ import Professors from './components/Professors'
 import Professor from './components/Professor'
 import Disciplines from "./components/Disciplines";
 import Discipline from "./components/Discipline";
+import AddTest from './components/AddTests'
 
 export default function App() {
 
@@ -25,6 +26,9 @@ export default function App() {
             </Route>
             <Route path="/discipline/:id" exact>
               <Discipline />
+            </Route>
+            <Route path="/insert" exact>
+              <AddTest />
             </Route>
         </Switch>
     </BrowserRouter>

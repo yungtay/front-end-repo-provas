@@ -10,7 +10,7 @@ export default function Professors() {
     request.catch(() => alert("Houve um erro ao buscar os professores"));
   }, []);
 
-  console.log(process.env.REACT_APP_API_BASE_URL)
+  console.log(professors)
 
   return (
     <ul>
