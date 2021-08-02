@@ -27,13 +27,23 @@ export default function Disciplines() {
       {Object.keys(periods).map((period, index) => (
         <ul key={index}>
           {period}
-          {disciplines?.map((discipline, index) => discipline.period.name === period ? (
-            <li key={index}>
-              <Link to={`/discipline/${discipline.id}`} key={index}>
-                {discipline.name} - {discipline.numberTests}
-              </Link>
-            </li>
-          ) : "" )}
+          {disciplines?.map((discipline, index) =>
+            discipline.period.name === period ? (
+              <li key={index}>
+                {discipline.numberTests ? (
+                  <Link to={`/discipline/${discipline.id}`} key={index}>
+                    {discipline.name} - {discipline.numberTests}
+                  </Link>
+                ) : (
+                  <div key={index}>
+                    {discipline.name} - {discipline.numberTests}
+                  </div>
+                )}
+              </li>
+            ) : (
+              ""
+            )
+          )}
         </ul>
       ))}
     </div>
